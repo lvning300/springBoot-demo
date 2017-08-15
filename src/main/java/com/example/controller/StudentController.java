@@ -1,6 +1,7 @@
 package com.example.controller;
 
 
+import com.example.bean.Student;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -8,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
@@ -21,16 +21,13 @@ public class StudentController {
 
     @RequestMapping(path = "queryStudentList", method = GET, produces = "application/json")
     @ApiOperation(value = "查询所有学生")
-    public List<Map> queryStudentList() {
+    public List<Student> queryStudentList() {
         mongoTemplate.getDb().getCollectionNames();
         // mongodbConfig.getHost();
         // mongodbConfig.getHost();
-        List<Map> studentList = mongoTemplate.findAll(Map.class);
+        List<Student> studentList = mongoTemplate.findAll(Student.class,"user");
         return studentList;
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-    }
+
 }

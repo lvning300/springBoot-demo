@@ -1,6 +1,11 @@
 package com.example.util;
 
 
+import org.apache.commons.jxpath.JXPathContext;
+
+import java.util.List;
+import java.util.Map;
+
 public class JXPathHandler {
 
     private JXPathContext context;

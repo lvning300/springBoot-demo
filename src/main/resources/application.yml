@@ -1,6 +1,4 @@
-
 spring:
-  profiles: sit
   data:
     mongodb:
-      uri: mongodb://127.0.0.1:27017/stu_info?maxidletimems=300000
+      uri: mongodb://localhost:27017/stu_info

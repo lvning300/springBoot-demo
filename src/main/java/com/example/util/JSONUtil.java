@@ -1,16 +1,9 @@
 package com.example.util;
 
 
-import java.io.IOException;
-import java.io.InputStream;
-import org.apache.commons.io.IOUtils;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.DeserializationConfig.Feature;
-import org.codehaus.jackson.type.TypeReference;
-
 public class JSONUtil {
 
-    static ObjectMapper objectMapper = new ObjectMapper();
+   /* static ObjectMapper objectMapper = new ObjectMapper();
 
     private JSONUtil() {
     }
@@ -50,5 +43,5 @@ public class JSONUtil {
             var2.printStackTrace();
             return "{}";
         }
-    }
+    }*/
 }
