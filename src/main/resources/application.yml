@@ -1,4 +1,18 @@
+server:
+  port: 2570
 spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/stu_info
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      acknowledge-mode: auto
+      prefetch: 100
+    template:
+      retry:
+        enabled: true
